@@ -1,0 +1,102 @@
+:root {
+    --clr-dark: #232323;
+}
+.step-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    border: 1px solid var(--clr-dark);
+    padding: 20px;
+}
+
+.step-form-header__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.step-form-header__steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.step-form-header__border-bottom {
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+    background: var(--clr-dark);
+    width: 0;
+    left: 0;
+    transition: top 0.5s, width 0.2s ease-in-out, left 0.2s ease-in-out;
+    -webkit-transition: top 0.5s, width 0.2s ease-in-out, left 0.2s ease-in-out;
+    -moz-transition: top 0.5s, width 0.2s ease-in-out, left 0.2s ease-in-out;
+    -ms-transition: top 0.5s, width 0.2s ease-in-out, left 0.2s ease-in-out;
+    -o-transition: top 0.5s, width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.step-form-header__steps.vertical {
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.step-form-header__steps.vertical .step-form-header__border-bottom {
+    height: 0;
+    width: 2px !important;
+    top: 0;
+    left: 0;
+    transition: top 0.5s, height 0.2s ease-in-out;
+    -webkit-transition: top 0.5s, height 0.2s ease-in-out;
+    -moz-transition: top 0.5s, height 0.2s ease-in-out;
+    -ms-transition: top 0.5s, height 0.2s ease-in-out;
+    -o-transition: top 0.5s, height 0.2s ease-in-out;
+}
+
+.step-form-header__step {
+    font-size: 1.2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.step-form-header__step.active {
+    font-weight: bold;
+    color: var(--clr-dark);
+}
+
+.step-form-header__step:hover {
+    color: var(--clr-dark);
+}
+
+.progress-bar {
+    border: 1px solid var(--clr-dark);
+    width: 500px;
+    height: 15px;
+    margin: 10px auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.progress-bar__fill {
+    background-color: var(--clr-dark);
+    width: 0;
+    height: 100%;
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -ms-transition: width 0.5s;
+    -o-transition: width 0.5s;
+}
